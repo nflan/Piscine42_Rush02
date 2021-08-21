@@ -6,17 +6,18 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:22:03 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 15:04:05 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/21 17:48:40 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "ft_rush02.h"
 int		ft_atoi(char *str);
 void	ft_putstr(char *str);
 void	ft_putchar(char c);
+int		ft_decimal(int nbr);
+void	ft_print(char *str);
 
-
-#include <stdio.h>
 /*int	main(int ac, char **av)
 {
 //	t_dict *tab;
@@ -41,46 +42,12 @@ void	ft_putchar(char c);
 	return (0);
 }*/
 
-int	main()
-{
-	char *str = "1234567891234567891234567891234567891";
-	int j, k, l, i;
-	int	size;
-	int block;
-	int first_block;
 
-	size = ft_strlen(str);
-	printf("size = %d\n", size);
-	block = size / 3;
-	first_block = size % 3;
-	printf("block = %d\n", block);
-	printf("First block = %d\n", first_block);
-	while (block >= 0)
-	{
-		if (size % 3 == 0)
-		{
-		}
-		if (size % 3 == 2)
-		{
-		}
-		if (size % 3 == 1)
-		{
-		}
-		size--;
-		if (size % 3 == 0)
-		{
-			afficher "million ou autre"
-			block--;
-		}
-	}
-/*	j = i % 1000;
-	k = i % 100;
-	l = i % 10;
-	printf("j = %d\nk = %d\nl = %d\n", j, k, l);
-	i = i / 1000;
-	j = i % 1000;
-	k = i % 100;
-	l = i % 10;
-	printf("j = %d\nk = %d\nl = %d\n", j, k, l);
-*/	return (0);
+
+int	main(void)
+{
+	char	*str = "1212567891234567891234567891234567812";
+	
+	ft_print(str);
+	return (0);
 }
