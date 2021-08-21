@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:15:08 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 23:28:26 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/21 23:40:52 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void	ft_print_mult(t_dict *tab, int block, char *str);
 //ft_print.c
 void	ft_print(t_dict *tab, char *str);
 int		ft_print_too_long(char *str, int sz, int block, int i, t_dict *tab);
-//ft_searching.c
 int		ft_searching(t_dict *tab, char *check, char *str);
 
 #endif

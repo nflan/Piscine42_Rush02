@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 15:26:30 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 22:51:04 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/21 23:39:55 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,23 @@ void	ft_print(t_dict *tab, char *str)
 		if (size % 3 == 0)
 			block--;
 	}
+}
+
+int	ft_searching(t_dict *tab, char *check, char *str)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (tab[i].nbr)
+	{
+		if (ft_strcmp(tab[i].nbr, check) == 0)
+		{
+			ft_putstr(tab[i].nbr_letters);
+			ft_putstr(" ");
+			return (1);
+		}
+		i++;
+	}
+	ft_putstr("Dict Error\n");
+	return (0);
 }
