@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:22:03 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 11:40:26 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/21 12:20:59 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ int	main(int ac, char **av)
 	{
 		if (ft_atoi(av[1]) < 0)
 			ft_putstr("Error\n");
-		t_dict = 
+		t_dict = open("numbers.dict", O_RDONLY);
 	}
 	if (ac == 3)
 	{
 		if (ft_atoi(av[2]) < 0)
 			ft_putstr("Error\n");
-		t_dict =
+		t_dict = open(av[1], O_RDONLY);
 	}
 	return (0);
 }
