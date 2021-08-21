@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:22:03 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 23:01:53 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/21 23:12:47 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ft_show_tab(t_dict *par)
 int	main(int ac, char **av)
 {
 	t_dict *struct_dict;
-	char *path_dict = "number.dict";
+	char *path_dict = "numbers.dict.txt";
 	char **tab_dict;
 
 	if (ac < 2 || ac > 3)

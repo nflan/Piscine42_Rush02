@@ -6,7 +6,7 @@
 /*   By: rmorel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 18:33:27 by rmorel            #+#    #+#             */
-/*   Updated: 2021/08/21 22:09:49 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/21 23:09:32 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ t_dict	*ft_struct_dict(char **tab_dict, char *path_dict)
 		}
 		i++;
 	}
-//	struct_dict[j] = 0;
+	struct_dict[j].nbr = 0;
+	struct_dict[j].nbr_letters = 0;
 	return (struct_dict);
 }
 
