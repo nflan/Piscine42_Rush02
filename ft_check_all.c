@@ -6,13 +6,11 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 19:43:59 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 19:45:05 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/21 22:42:03 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_tools.h"
-
-int	ft_searching(t_dict *tab, char *str);
+#include "ft_rush02.h"
 
 void	ft_print_mult(t_dict *tab, int block, char *str)
 {
@@ -44,24 +42,8 @@ void	ft_print_mult(t_dict *tab, int block, char *str)
 
 void	ft_print_hundred(t_dict *tab, char c, char *str)
 {
-	if (c == '1')
-		ft_searching(tab, "100", str);
-	else if (c == '2')
-		ft_searching(tab, "200", str);
-	else if (c == '3')
-		ft_searching(tab, "300", str);
-	else if (c == '4')
-		ft_searching(tab, "400", str);
-	else if (c == '5')
-		ft_searching(tab, "500", str);
-	else if (c == '6')
-		ft_searching(tab, "600", str);
-	else if (c == '7')
-		ft_searching(tab, "700", str);
-	else if (c == '8')
-		ft_searching(tab, "800", str);
-	else if (c == '9')
-		ft_searching(tab, "900", str);
+	ft_searching(tab, &c, str);
+	ft_searching(tab, "100", str);	
 }
 
 void	ft_print_dec(t_dict *tab, char c, char *str)
