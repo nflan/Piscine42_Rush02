@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:13:17 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 22:45:56 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/21 23:27:09 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,3 +64,14 @@ int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
+}
+

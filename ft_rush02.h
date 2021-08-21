@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:15:08 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 22:50:24 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/21 23:28:26 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	ft_putstr(char *str);
 void	ft_putchar(char c);
 int		ft_atoi(char *str);
 int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
 //ft_split.c :
 char	**ft_split(char *str, char *charset);
 int		ft_belong_charset(char c, char *charset);

@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 19:43:59 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 23:20:26 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/21 23:32:50 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,24 @@ void	ft_print_mult(t_dict *tab, int block, char *str)
 
 void	ft_print_hundred(t_dict *tab, char c, char *str)
 {
-	ft_searching(tab, &c, str);
+	if (c == '1')
+		ft_searching(tab, "1", str);
+	else if (c == '2')
+		ft_searching(tab, "2", str);
+	else if (c == '3')
+		ft_searching(tab, "3", str);
+	else if (c == '4')
+		ft_searching(tab, "4", str);
+	else if (c == '5')
+		ft_searching(tab, "5", str);
+	else if (c == '6')
+		ft_searching(tab, "6", str);
+	else if (c == '7')
+		ft_searching(tab, "7", str);
+	else if (c == '8')
+		ft_searching(tab, "8", str);
+	else if (c == '9')
+		ft_searching(tab, "9", str);
 	ft_searching(tab, "100", str);	
 }
 

@@ -6,7 +6,7 @@
 /*   By: rmorel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 21:04:35 by rmorel            #+#    #+#             */
-/*   Updated: 2021/08/21 21:54:01 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/21 23:35:58 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ char *ft_put_dict_on_str(char *path_dict)
 	int		fd;
 	int		cl;
 
-	printf("%d\n", ft_size_dict(path_dict));
 	str_dict = malloc(sizeof(char) * (ft_size_dict(path_dict) + 1));
 	if (!str_dict)
 		return (0);

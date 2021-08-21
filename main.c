@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:22:03 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 23:12:47 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/21 23:37:51 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,10 @@ int	main(int ac, char **av)
 	if (ac == 2)
 	{
 		if (av[1][0] == '-')
+		{
 			ft_putstr("Error\n");
+			return (0);
+		}
 		tab_dict = ft_init_tab_dict(path_dict);
 		if (!tab_dict)
 			return (0);
@@ -62,7 +65,10 @@ int	main(int ac, char **av)
 	if (ac == 3)
 	{
 		if (av[2][0] == '-')
+		{
 			ft_putstr("Error\n");
+			return (0);
+		}
 		tab_dict = ft_init_tab_dict(av[1]);
 		if (!tab_dict)
 			return (0);
