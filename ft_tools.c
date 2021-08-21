@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:13:17 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 10:37:53 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/21 11:57:17 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,14 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	return (integer * minus);
+}
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (1);
 }
