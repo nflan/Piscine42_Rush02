@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:22:03 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 18:58:03 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 19:48:20 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ int	ft_main_1_arg(char **av)
 		return (dict_error());
 	if (!ft_print(av[1], struct_dict))
 		return (0);
+	free(tab_dict);
+	free(struct_dict);
 	return (1);
 }
 
@@ -68,5 +70,7 @@ int	ft_main_2_arg(char **av)
 		return (dict_error());
 	if (!ft_print(av[2], struct_dict))
 		return (0);
+	free(tab_dict);
+	free(struct_dict);
 	return (1);
 }

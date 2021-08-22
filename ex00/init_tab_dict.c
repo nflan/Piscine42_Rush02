@@ -6,42 +6,34 @@
 /*   By: rmorel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 21:04:35 by rmorel            #+#    #+#             */
-/*   Updated: 2021/08/22 19:00:09 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 20:22:19 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
 
+#define BUFF_SIZE 20
+
 int	ft_size_dict(char *path_dict)
 {
 	int		ret;
-	char	*buff_dict;
+	char	buff_dict[BUFF_SIZE];
 	int		fd;
-	int		cl;
 	int		count;
 
 	count = 0;
-	buff_dict = malloc(sizeof(char) * (20 + 1));
-	if (!buff_dict)
-		return (0);
 	fd = open (path_dict, O_RDONLY);
 	if (fd == -1)
-	{
-		ft_putstr("Error\n");
-		return (0);
-	}
+		return (error());
 	while (1)
 	{
-		ret = read(fd, buff_dict, 20);
+		ret = read(fd, buff_dict, BUFF_SIZE);
 		if (ret > 0)
-		{
-			buff_dict[ret] = '\0';
 			count = count + ret;
-		}
 		else
 			break ;
 	}
-	cl = close (fd);
+	fd = close(fd);
 	return (count);
 }
 
