@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 15:43:16 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 20:22:20 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 21:59:53 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,11 @@ int	ft_print_three_nb(t_dict *tab, char *str)
 	if (str[1] == '1')
 		send_teen(tab, str[2]);
 	if (str[2] != '0' && str[1] != '1')
+	{
+		if (str[1] == '0')
+			ft_zero_ending(str, 1);
 		ft_print_one_nb(tab, str[2]);
+	}
 	return (1);
 }
 
@@ -43,7 +47,6 @@ int	ft_print_one_nb(t_dict *tab, char c)
 	tmp[1] = 0;
 	while (tab[i].nbr)
 	{
-//		printf("s1 %s s2 %c i %d\n", tab[i].nbr, c, i);
 		if (ft_strcmp(tab[i].nbr, tmp) == 0)
 		{
 			ft_putstr(tab[i].nbr_letters);

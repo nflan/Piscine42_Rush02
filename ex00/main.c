@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:22:03 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 19:48:20 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 22:00:35 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	ft_main_2_arg(char **av)
 	if (!tab_dict)
 		return (0);
 	struct_dict = ft_struct_dict(tab_dict, path_dict);
-	if (!ft_check_double(struct_dict))
+	if (!ft_check_double(struct_dict) || !ft_check_all_entry(struct_dict))
 		return (dict_error());
 	if (!ft_print(av[2], struct_dict))
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 18:21:34 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 21:45:01 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 22:00:22 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,6 @@ void	send_teen(t_dict *tab, char c);
 int		ft_check_double(t_dict *struct_dict);
 int		ft_compare_dict_str(char *dict_str, t_dict struct_dict);
 int		ft_check_one_entry(char *tab_ref, t_dict *struct_dict);
-int		ft_check_all_entry(char *dict_str, t_dict *struct_dict);
+int		ft_check_all_entry(t_dict *struct_dict);
 
 #endif

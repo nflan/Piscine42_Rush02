@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 17:04:08 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 21:44:57 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 21:51:18 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int	ft_print_dest(char *dest, t_dict *tab)
 	i = 0;
 	while (dest[i])
 	{
-		if (i != 0 || !(dest[i - 3] != '0' && dest[i - 2] != '0' 
-					&& dest[i - 1] != '0'))
+		if (i != 0 && !(dest[i] == '0' && dest[i + 1] == '0' 
+					&& dest[i + 2] == '0'))
 			write (1, " ", 1);
 		if (!ft_print_three_nb(tab, &dest[i]))
 			return (0);
