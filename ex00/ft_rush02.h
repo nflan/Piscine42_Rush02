@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:15:08 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 09:44:12 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 14:30:19 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,16 @@ char	*ft_find_char_nb(char *s);
 //main.c
 void	ft_show_tab(t_dict *par);
 //ft_check_all.c
-void	ft_print_unit(t_dict *tab, char c, char *str);
-void	ft_print_teen(t_dict *tab, char b, char *str);
-void	ft_print_dec(t_dict *tab, char c, char *str);
-void	ft_print_hundred(t_dict *tab, char c, char *str);
-void	ft_print_mult(t_dict *tab, int block, char *str);
+void	ft_print_unit(t_dict *tab, char c, char *str, int i);
+void	ft_print_teen(t_dict *tab, char b, char *str, int i);
+void	ft_print_dec(t_dict *tab, char c, char *str, int i);
+void	ft_print_hundred(t_dict *tab, char c, char *str, int i);
+void	ft_print_mult(t_dict *tab, int block, int i, char *str);
 //ft_print.c
 void	ft_print(t_dict *tab, char *str);
 int		ft_print_too_long(char *str, int sz, int block, t_dict *tab);
-int		ft_searching(t_dict *tab, char *check, char *str);
+int		ft_searching(t_dict *tab, char *check, char *str, int i);
+void	ft_zero_ending(char *str, int i, int block);
+int		ft_check_mult(char *str, int i);
 
 #endif
