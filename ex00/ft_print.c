@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 15:26:30 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 14:38:41 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 15:03:01 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,10 @@ void	ft_print(t_dict *tab, char *str)
 	while (size != 0 && ft_strlen(str) - size <= ft_strlen(str))
 	{
 		if (str[0] == '0' && ft_strlen(str) == 1)
+		{
 			ft_searching(tab, "0", str, ft_strlen(str) - size);
+			ft_putstr("\n");
+		}
 		size = ft_print_too_long(str, size, block, tab);
 		if (size % 3 == 0 && block >= 0 && size != 0)
 		{
@@ -91,16 +94,17 @@ void ft_zero_ending(char *str, int i, int block)
 {
 	int space;
 	int	j;
+	(void) block;
 
 	j = i;
 	space = 0;
 	while (str[i])
 	{
-		if (str[i + 1] != '0' && str[i] != 0)
+		if (str[i] != '0' && str[i] != 0)
 			space = 1;
 		i++;
 	}
-	if ((str[j] && str[j] != '0') || block != 0)
+	if ((str[j] && str[j] != '0') && block != 0) 
 	{
 		if (space == 1)
 			ft_putstr(" ");
@@ -111,7 +115,7 @@ void ft_zero_ending(char *str, int i, int block)
 
 int	ft_check_mult(char *str, int i)
 {
-	if (str[i - 2] == '0' && str[i - 1] == '0' && str[i] == '0')
+	if (str[i - 3] == '0' && str[i - 2] == '0' && str[i - 1] == '0')
 		return (0);
 	return (1);
 }
