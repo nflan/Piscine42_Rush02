@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 18:21:34 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 19:08:48 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 21:45:01 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ char	*ft_create_key_suffix(char *dest);
 int		ft_print_suffix(char *dest, t_dict *tab);
 void	ft_fill_dest(char *dest, char *str, int size);
 char	*ft_str_with_zero(char *str);
+char	*ft_str_zero_trimmed(char *str);
 //print.c :
 int		ft_print_dest(char *dest, t_dict *tab);
 int		ft_print(char *str, t_dict *tab);

@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 17:02:29 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 19:23:49 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 21:44:59 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,34 @@ char	*ft_create_key_suffix(char *dest)
 	}
 	key[i] = '\0';
 	return (key);
+}
+
+char	*ft_str_zero_trimmed(char *str)
+{
+	int	i;
+	int	c;
+	char	*str_no_zero;
+
+	i = 0;
+	c = 0;
+	while (str[i] && str[i] == '0')
+		i++;
+	while (str[i])
+	{
+		i++;
+		c++;
+	}
+	str_no_zero = malloc(sizeof(char) * (c + 1));
+	if (!str_no_zero)
+		return (0);
+	i = i - c;
+	c = 0;
+	while (str[i])
+	{
+		str_no_zero[c] = str[i];
+		i++;
+		c++;
+	}
+	str_no_zero[c] = '\0';
+	return (str_no_zero);
 }
