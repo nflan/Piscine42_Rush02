@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:22:03 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/21 23:37:51 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 16:28:14 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	main(int ac, char **av)
 		if (!tab_dict)
 			return (0);
 		struct_dict = ft_struct_dict(tab_dict, path_dict);
-		ft_print(struct_dict, av[1]);
+		ft_print_three_nb(struct_dict, av[1]);
 	}
 	if (ac == 3)
 	{
@@ -73,7 +73,7 @@ int	main(int ac, char **av)
 		if (!tab_dict)
 			return (0);
 		struct_dict = ft_struct_dict(tab_dict, path_dict);
-		ft_print(struct_dict, av[2]);
+		ft_print_three_nb(struct_dict, av[2]);
 	}
 	return (0);
 }
