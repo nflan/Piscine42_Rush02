@@ -6,7 +6,7 @@
 /*   By: rmorel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 18:33:27 by rmorel            #+#    #+#             */
-/*   Updated: 2021/08/22 18:23:09 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 19:06:28 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 t_dict	*ft_struct_dict(char **tab_dict, char *path_dict)
 {
 	t_dict	*struct_dict;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;

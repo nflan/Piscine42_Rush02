@@ -6,7 +6,7 @@
 /*   By: rmorel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 21:04:35 by rmorel            #+#    #+#             */
-/*   Updated: 2021/08/22 18:23:35 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 19:00:09 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_size_dict(char *path_dict)
 {
-	int	ret;
-	char *buff_dict;
-	int	fd;
-	int	cl;
-	int	count;
+	int		ret;
+	char	*buff_dict;
+	int		fd;
+	int		cl;
+	int		count;
 
 	count = 0;
 	buff_dict = malloc(sizeof(char) * (20 + 1));
@@ -35,8 +35,8 @@ int	ft_size_dict(char *path_dict)
 		ret = read(fd, buff_dict, 20);
 		if (ret > 0)
 		{
-		buff_dict[ret] = '\0';
-		count = count + ret;
+			buff_dict[ret] = '\0';
+			count = count + ret;
 		}
 		else
 			break ;
@@ -45,10 +45,10 @@ int	ft_size_dict(char *path_dict)
 	return (count);
 }
 
-char *ft_put_dict_on_str(char *path_dict)
+char	*ft_put_dict_on_str(char *path_dict)
 {
 	int		ret;
-	char 	*str_dict;
+	char	*str_dict;
 	int		fd;
 	int		cl;
 
@@ -90,4 +90,3 @@ char	**ft_init_tab_ref_dict(char *path_ref_dict)
 		return (0);
 	return (tab_ref_dict);
 }
-

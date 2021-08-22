@@ -6,18 +6,18 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 17:02:29 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 18:25:10 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 19:02:23 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
 
 //On cree une chaine avec n * 3 caracteres avec que des 0
-char    *ft_str_with_zero(char    *str)
+char	*ft_str_with_zero(char *str)
 {
-	int     size;
-	char    *dest;
-	int        i;
+	int		size;
+	char	*dest;
+	int		i;
 
 	if (ft_strlen(str) % 3 == 0)
 		size = ft_strlen(str);
@@ -40,10 +40,10 @@ char    *ft_str_with_zero(char    *str)
 }
 
 //On rempli la chaine cree en partant de la fin
-void    ft_fill_dest(char *dest, char *str, int size)
+void	ft_fill_dest(char *dest, char *str, int size)
 {
-	int    i;
-	int    j;
+	int	i;
+	int	j;
 
 	i = size;
 	j = ft_strlen(str);
@@ -56,9 +56,9 @@ void    ft_fill_dest(char *dest, char *str, int size)
 }
 
 //On imprime le suffixe
-int    ft_print_suffix(char *dest, t_dict *tab)
+int	ft_print_suffix(char *dest, t_dict *tab)
 {
-	char *key;
+	char	*key;
 
 	key = ft_create_key_suffix(dest);
 	if (!key)
@@ -74,11 +74,11 @@ int    ft_print_suffix(char *dest, t_dict *tab)
 }
 
 //On cree le suffixe associe
-char    *ft_create_key_suffix(char *dest)
+char	*ft_create_key_suffix(char *dest)
 {
-	int        i;
-	int        size;
-	char    *key;
+	int		i;
+	int		size;
+	char	*key;
 
 	size = ft_strlen(dest) - 2;
 	key = malloc(sizeof(char) * (size + 1));

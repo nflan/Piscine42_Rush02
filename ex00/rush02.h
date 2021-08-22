@@ -6,19 +6,19 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 18:21:34 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 18:34:15 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 19:08:48 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_RUSH02_H
-# define FT_RUSH02_H
+#ifndef RUSH02_H
+# define RUSH02_H
 
-#include <sys/types.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <stdio.h>
+# include <sys/types.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <stdio.h>
 
 typedef struct s_dict
 {
@@ -37,8 +37,8 @@ int		ft_strlen(char *str);
 int		ft_strcmp(char *s1, char *s2);
 //ft_checks.c :
 int		check_parameter(char *str);
-void	error();
-void	dict_error();
+int		error(void);
+int		dict_error(void);
 //ft_split.c :
 char	**ft_split(char *str, char *charset);
 int		ft_belong_charset(char c, char *charset);

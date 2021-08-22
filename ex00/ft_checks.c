@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 18:20:40 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 18:31:19 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 18:54:22 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	check_parameter(char *str)
 {
 	unsigned int	i;
-	
+
 	i = 0;
 	while (str[i])
 	{
@@ -26,12 +26,14 @@ int	check_parameter(char *str)
 	return (1);
 }
 
-void	error()
+int	error(void)
 {
 	ft_putstr("Error\n");
+	return (0);
 }
 
-void	dict_error()
+int	dict_error(void)
 {
 	ft_putstr("Dict Error\n");
+	return (0);
 }

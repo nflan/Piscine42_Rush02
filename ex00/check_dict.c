@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 18:18:52 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 18:28:53 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 19:05:48 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
   se trouvent bien dans le dict en annexe*/
 int	ft_check_all_entry(char *dict_str, t_dict *struct_dict)
 {
-	(void)	dict_str;
 	int		i;
 	char	*path_ref_dict;
 	char	**tab_ref;
 
+	(void) dict_str;
 	path_ref_dict = "ref.dict.txt";
 	tab_ref = ft_init_tab_ref_dict(path_ref_dict);
 	i = 0;
