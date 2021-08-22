@@ -6,11 +6,11 @@
 /*   By: rmorel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 21:04:35 by rmorel            #+#    #+#             */
-/*   Updated: 2021/08/21 23:35:58 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 18:23:35 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_rush02.h"
+#include "rush02.h"
 
 int	ft_size_dict(char *path_dict)
 {

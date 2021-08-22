@@ -6,11 +6,11 @@
 /*   By: rmorel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 13:12:29 by rmorel            #+#    #+#             */
-/*   Updated: 2021/08/21 21:53:05 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 18:22:26 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "rush02.h"
 
 int		ft_belong_charset(char c, char *charset);
 int		ft_size(char *str, char *charset);

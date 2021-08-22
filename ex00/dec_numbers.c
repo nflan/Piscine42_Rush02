@@ -6,11 +6,11 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 16:19:04 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 16:52:03 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 18:24:08 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_rush02.h"
+#include "rush02.h"
 
 void	send_dec(t_dict *tab, char c)
 {

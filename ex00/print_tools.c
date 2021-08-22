@@ -6,11 +6,11 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 17:02:29 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 17:10:33 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 18:25:10 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_rush02.h"
+#include "rush02.h"
 
 //On cree une chaine avec n * 3 caracteres avec que des 0
 char    *ft_str_with_zero(char    *str)

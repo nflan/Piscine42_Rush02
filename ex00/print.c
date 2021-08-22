@@ -6,11 +6,11 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 17:04:08 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 17:09:09 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 18:23:45 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_rush02.h"
+#include "rush02.h"
 
 int    ft_print(char *str, t_dict *tab)
 {

@@ -6,11 +6,11 @@
 /*   By: rmorel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 18:33:27 by rmorel            #+#    #+#             */
-/*   Updated: 2021/08/21 23:09:32 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 18:23:09 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_rush02.h"
+#include "rush02.h"
 
 t_dict	*ft_struct_dict(char **tab_dict, char *path_dict)
 {
