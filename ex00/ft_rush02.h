@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:15:08 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 16:48:28 by nflan            ###   ########.fr       */
+/*   Updated: 2021/08/22 17:17:07 by nflan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ typedef struct s_dict
 	char	*nbr_letters;
 }	t_dict;
 
+//main.c
+int		ft_main_1_arg(char **av);
+int		ft_main_2_arg(char **av);
 //tool.c :
 void	ft_putstr(char *str);
 void	ft_putchar(char c);
@@ -70,7 +73,14 @@ int		ft_print_three_nb(t_dict *tab, char *str);
 int		ft_print_one_nb(t_dict *tab, char c);
 int		ft_print_str(t_dict *tab, char *str);
 void	ft_zero_ending(char *str, int i);
-
+//print_tools.c
+char	*ft_create_key_suffix(char *dest);
+int		ft_print_suffix(char *dest, t_dict *tab);
+void	ft_fill_dest(char *dest, char *str, int size);
+char	*ft_str_with_zero(char *str);
+//print.c
+int		ft_print_dest(char *dest, t_dict *tab);
+int		ft_print(char *str, t_dict *tab);
 //dec_numbers.c
 void	send_dec(t_dict *tab, char c);
 void	send_teen(t_dict *tab, char c);
