@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 10:22:03 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 22:00:35 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 23:29:53 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ft_main_2_arg(char **av)
 	char	**tab_dict;
 
 	path_dict = "numbers.dict.txt";
-	if (!check_parameter(av[2]))
+	if (!check_parameter(av[2]) || av[1][0] == '\0')
 		return (error());
 	tab_dict = ft_init_tab_dict(av[1]);
 	if (!tab_dict)

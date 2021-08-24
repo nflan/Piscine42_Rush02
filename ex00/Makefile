@@ -6,7 +6,7 @@
 #    By: nflan <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/22 09:19:20 by nflan             #+#    #+#              #
-#    Updated: 2021/08/22 20:19:13 by rmorel           ###   ########.fr        #
+#    Updated: 2021/08/22 23:41:02 by nflan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,12 @@ CC = gcc
 RM = rm -f
 
 .c.o :
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o} -g
+	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
 All : ${NAME}
 
 ${NAME} : ${OBJS}
-	${CC} -o ${NAME} ${OBJS} -fsanitize=address
+	${CC} -o ${NAME} ${OBJS}
 
 clean:
 	rm ${OBJS}

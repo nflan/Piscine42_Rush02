@@ -6,13 +6,11 @@
 /*   By: rmorel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 21:04:35 by rmorel            #+#    #+#             */
-/*   Updated: 2021/08/22 20:22:19 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 23:31:42 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
-
-#define BUFF_SIZE 20
 
 int	ft_size_dict(char *path_dict)
 {
@@ -49,10 +47,7 @@ char	*ft_put_dict_on_str(char *path_dict)
 		return (0);
 	fd = open (path_dict, O_RDONLY);
 	if (fd == -1)
-	{
-		ft_putstr("Error\n");
 		return (0);
-	}
 	ret = read(fd, str_dict, (ft_size_dict(path_dict) + 1));
 	str_dict[ret] = '\0';
 	cl = close (fd);
@@ -65,6 +60,8 @@ char	**ft_init_tab_dict(char *path_dict)
 	char	**tab_dict;
 
 	str_dict = ft_put_dict_on_str(path_dict);
+	if (str_dict == NULL)
+		return (0);
 	tab_dict = ft_split(str_dict, "\n");
 	if (!tab_dict)
 		return (0);

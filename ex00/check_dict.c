@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 18:18:52 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 22:00:43 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 23:31:41 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,11 @@ int	ft_compare_dict_str(char *dict_str, t_dict struct_dict)
 	int	i;
 
 	i = 0;
-	while (dict_str[i] && struct_dict.nbr[i] 
-			&& dict_str[i] == struct_dict.nbr[i])
+	while (dict_str[i] && struct_dict.nbr[i]
+		&& dict_str[i] == struct_dict.nbr[i])
 		i++;
 	if ((dict_str[i] == ' ' || dict_str[i] == ':')
-			&& struct_dict.nbr[i] == '\0')
+		&& struct_dict.nbr[i] == '\0')
 		return (1);
 	else
 		return (0);

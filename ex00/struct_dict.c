@@ -6,7 +6,7 @@
 /*   By: rmorel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 18:33:27 by rmorel            #+#    #+#             */
-/*   Updated: 2021/08/22 19:44:29 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 23:27:53 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,39 @@ char	*ft_find_nb(char *str)
 
 char	*ft_find_char_nb(char *s)
 {
-	int	i;
+	int		i;
+	char	*str_trim;
 
 	i = 0;
 	while (s[i] >= '0' && s[i] <= '9')
 		i++;
 	while ((s[i] >= 9 && s[i] <= 13) || s[i] == 32 || s[i] == ':')
 		i++;
-	return (&s[i]);
+	str_trim = ft_trim_end_space(&s[i]);
+	if (!str_trim)
+		return (0);
+	return (str_trim);
+}
+
+char	*ft_trim_end_space(char *str)
+{
+	int		i;
+	int		stop;
+	char	*str_trim;
+
+	i = ft_strlen(str) - 1;
+	while (str[i] == ' ')
+		i--;
+	stop = i + 2;
+	str_trim = malloc(sizeof(char) * (stop + 1));
+	if (!str_trim)
+		return (0);
+	i = 0;
+	while (i < stop - 1)
+	{
+		str_trim[i] = str[i];
+		i++;
+	}
+	str_trim[i] = '\0';
+	return (str_trim);
 }

@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 18:21:34 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 22:00:22 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 23:31:43 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <stdio.h>
+
+# define BUFF_SIZE 20
 
 typedef struct s_dict
 {
@@ -39,6 +41,7 @@ int		ft_strcmp(char *s1, char *s2);
 int		check_parameter(char *str);
 int		error(void);
 int		dict_error(void);
+int		ft_max_struct(t_dict *struct_dict, char *dest);
 //ft_split.c :
 char	**ft_split(char *str, char *charset);
 int		ft_belong_charset(char c, char *charset);
@@ -58,6 +61,7 @@ int		ft_line_dict(char *path_dict);
 t_dict	*ft_struct_dict(char **tab_dict, char *path_dict);
 char	*ft_find_nb(char *str);
 char	*ft_find_char_nb(char *s);
+char	*ft_trim_end_space(char *str);
 //print_three.c :
 int		ft_print_three_nb(t_dict *tab, char *str);
 int		ft_print_one_nb(t_dict *tab, char c);

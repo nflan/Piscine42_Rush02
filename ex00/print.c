@@ -6,7 +6,7 @@
 /*   By: nflan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 17:04:08 by nflan             #+#    #+#             */
-/*   Updated: 2021/08/22 21:51:18 by rmorel           ###   ########.fr       */
+/*   Updated: 2021/08/22 23:23:24 by rmorel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_print(char *str, t_dict *tab)
 {
 	char	*dest;
-	char 	*str_no_zero;
+	char	*str_no_zero;
 
 	str_no_zero = ft_str_zero_trimmed(str);
 	if (!str_no_zero)
@@ -24,7 +24,12 @@ int	ft_print(char *str, t_dict *tab)
 	if (!dest)
 		return (0);
 	free(str_no_zero);
-	if (ft_print_dest(dest, tab))
+	if (dest[0] == '\0')
+	{
+		ft_print_one_nb(tab, '0');
+		return (1);
+	}
+	if (ft_max_struct(tab, dest) && ft_print_dest(dest, tab))
 	{
 		free(dest);
 		return (1);
@@ -40,8 +45,8 @@ int	ft_print_dest(char *dest, t_dict *tab)
 	i = 0;
 	while (dest[i])
 	{
-		if (i != 0 && !(dest[i] == '0' && dest[i + 1] == '0' 
-					&& dest[i + 2] == '0'))
+		if (i != 0 && !(dest[i] == '0' && dest[i + 1] == '0'
+				&& dest[i + 2] == '0'))
 			write (1, " ", 1);
 		if (!ft_print_three_nb(tab, &dest[i]))
 			return (0);
